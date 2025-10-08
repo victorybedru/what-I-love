@@ -1,0 +1,442 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&family=SUSE+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+/* GENERAL RESET: Ensure consistent styling across all browsers */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* BODY*/
+body {
+  background-color: black;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+  background-attachment: fixed;
+  color: white;
+}
+
+/* HEADINGS & TEXT*/
+h1 {
+  text-align: center;
+  color: red;
+  font-size: 50px;
+  margin: 50px auto;
+}
+
+h2 {
+  font-size: 34px;
+  text-align: center;
+  color: red;
+}
+
+h3 {
+  font-size: 26px;
+}
+
+p {
+  font-size: 20px;
+}
+
+a {
+  font-size: 20px;
+  color: white;
+  text-decoration: none;/* Remove underline */
+}
+
+a:hover, a:visited {
+  color: red;
+}
+
+/*NAVBAR*/
+nav {
+  background-color: #1a1a1a;/* Set background color for navbar */
+  padding:20px;
+}
+
+.navbar {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;/* Align navbar items vertically */
+  gap: 50px;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar li a {
+  color: white;
+  font-size: 20px;
+  text-decoration: none;
+  transition: color 0.3s ease;/* Add transition effect for color */
+}
+
+.navbar li a:hover {
+  color: red;
+}
+
+
+/*INTRO SECTIONS*/
+.intro,
+.intro1 {
+  margin: 40px;
+  padding: 0 20px;
+  line-height: 1.5;/* Set line height */
+}
+
+
+.intro1 h1 {
+  margin-bottom: 5px;/* Add space below h1 */
+}
+
+.little {
+  text-align: center;
+}
+
+.center {
+  text-align: center;
+}
+
+/*IMAGE*/
+.images {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 10px;
+  padding: 50px;
+  margin-bottom: 100px;
+}
+
+.images img {
+  border-radius: 5px;
+  transition: transform 0.3s;
+}
+
+.images img:hover {
+  transform: scale(1.1);/* Slight zoom effect on hover */
+  box-shadow: 0 12px 25px rgba(55, 60, 0, 0.6);/* Add shadow effect */
+}
+
+.images img.small {
+  height: 250px;
+  width: 300px;
+}
+
+.images img.mid {
+  height: 300px;
+  width: 300px;
+}
+
+.images img.big {
+  height: 350px;
+}
+
+/*BOX OFFICE SECTION (IFRAMES)*/
+.firstRow,.secondRow {
+  display: flex;/* Use flexbox layout */
+  padding: 40px;
+  width: 100%;/* Full width */
+  justify-content: space-between;
+}
+
+iframe {
+    padding: 20px;
+}
+
+.left:hover,
+.right:hover,
+.middle:hover {
+  transform: scale(1.05);
+}
+
+.rating {
+  color: #ffdf91;/* Set color for movie ratings */
+  font-weight: bold;/* Make rating bold */
+}
+
+
+.genere {
+  font-size: 1rem;
+  border: 1px solid white; /* Add a white border around genre tags */
+  border-radius: 20px;
+  text-align: center;
+  width: 120px;
+  margin: 10px;
+  padding: 5px;
+}
+
+.tags {
+  display: flex; /* Use flexbox for genre tags */
+}
+
+/*SECOND ROW SPACING*/
+.secondRow {
+  margin-bottom: 150px;
+}
+
+/*FOOTER*/
+footer {
+  text-align:center;/* Center the footer text */
+  background-color: #1a1a1a;
+  font-family: 'Open Sans', ;
+  padding:30px;
+  margin-bottom: 20px;/* Add space below the footer */
+}
+footer p{
+  font-size:1.2rem;
+}
+
+/* MOVIE GENRES SECTIONS*/
+.genre {
+  display: flex;
+  justify-content: center;
+  gap: 10px;/* Add space between genre items */
+  margin: 20px 0;
+}
+
+.box {
+  background-color: #1a1a1a;
+  text-align: center;
+  cursor: pointer;
+  border: 2px solid black;
+  border-radius: 10px;
+  height: 500px; /*sets the height of the boxes */
+  width: 400px;
+  margin: 20px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.box img {
+  width: 100%;
+  height: 400px;
+  border-radius: 8px;
+}
+
+.box:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(255, 0, 0, 0.5);
+}
+
+blockquote {
+  color: #dcdcdc; /*sets the color of the boxes */
+}
+
+/* RESPONSIVENESS*/
+@media (max-width: 768px) {
+  nav {
+    position: relative;
+  }
+
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    display: none;
+    width: 100%;
+    background: #1a1a1a;
+    padding: 10px 0;
+  }
+
+  .navbar.show {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+    cursor: pointer;
+    color: white;
+    font-size: 26px;
+    padding: 10px 20px;
+  }
+
+  .navbar li {
+    width: 100%;
+    padding: 10px 20px;
+  }
+
+  .navbar li a {
+    display: block;
+    width: 100%;
+  }
+}
+
+@media (min-width: 769px) {
+  .menu-toggle {
+    display: none;
+  }
+
+  .navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+  }
+}
+
+/* MOBILE RESPONSIVENESS*/
+
+@media (max-width: 900px) {
+  /* Making five-image layout scrollable */
+  .images {
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    padding: 20px;
+  }
+
+  .images img {
+    width: 45%;     /* two per row */
+    height: auto;
+  }
+
+  /* For smaller mobiles */
+  @media (max-width: 600px) {
+    .images img {
+      width: 90%;   /* one per row on very small screens */
+    }
+  }
+
+  /* iframes overflowing  */
+  .firstRow,
+  .secondRow {
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    padding: 20px;
+  }
+
+  iframe {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    max-width: 100%;
+    border-radius: 10px;
+  }
+
+  /* Adjust headings and text size for mobile */
+  h1 {
+    font-size: 32px;
+  }
+
+  h2 {
+    font-size: 26px;
+  }
+
+  p {
+    font-size: 18px;
+  }
+
+  /* Fix footer spacing */
+  footer {
+    padding: 20px;
+  }
+  .images {
+    display: flex;
+    flex-wrap: nowrap;     
+    overflow-x: auto;          
+    scroll-behavior: smooth;
+    gap: 10px;
+    padding: 20px;
+    justify-content: flex-start;
+  }
+
+  .images img {
+    flex: 0 0 auto;       
+    width: 250px;
+    height: auto;
+    border-radius: 8px;
+  }
+
+  /* Hide scrollbar look */
+  .images::-webkit-scrollbar {
+    height: 6px;
+  }
+  .images::-webkit-scrollbar-thumb {
+    background-color: #555;
+    border-radius: 4px;
+  }
+
+  /* Fix iframes section to fit perfectly on mobile */
+  .firstRow,
+  .secondRow {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 15px;
+    box-sizing: border-box;
+  }
+
+  .firstRow > div,
+  .secondRow > div {
+    width: 100%;
+    max-width: 100%;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  iframe {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    max-width: 100%;
+    border: none;
+  }
+  /* Genre boxes section */
+  
+  .genre {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    gap: 15px;
+    padding: 20px;
+    justify-content: flex-start;
+  }
+
+  .genre::-webkit-scrollbar{
+    height: 6px;
+  }
+
+  .genre::-webkit-scrollbar-thumb{
+    background-color: #555;
+    border-radius:4px;
+  }
+
+  /* Box adjustments */
+  .box {
+    flex: 0 0 auto;
+    width: 260px;
+    height: 360px;
+    padding: 10px;
+    background-color: #1a1a1a;
+    border-radius: 10px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+  }
+
+  .box img {
+    width: 100%;
+    height: 65%;
+    border-radius: 8px;
+  }
+
+  .box h3 {
+    font-size: 18px;
+    margin-top: 10px;
+  }
+
+  .box blockquote {
+    font-size: 15px;
+    line-height: 1.4;
+    margin: 5px 10px 15px 10px;
+    word-wrap: break-word;
+  }
+
+
+}
+
+
+

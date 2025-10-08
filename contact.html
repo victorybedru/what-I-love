@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Me</title>
+    <link rel="stylesheet" href="style2.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="menu-toggle">☰ Menu</div>
+
+        <ul class="navbar">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="genre.html">Genres</a></li>
+          <li><a href="film.html">Explore Movies</a></li>
+          <li><a href="about me.html">About Me</a></li>
+          <li><a href="contact.html">Contact Me</a></li>
+        </ul>
+      </nav>
+    </header>
+    <!DOCTYPE html>
+    <section class="contact">
+      <h1>Contact Me</h1>
+      <p>Feel free to reach out to me for any inquiries, feedback, or suggestions. I’d love to hear from you!</p>
+      <!-- Contact Form -->
+      <form action="submit_form.php" method="POST" class="contact-form">
+        <label for="name">Your Name</label>
+        <input type="text" id="name" name="name" required placeholder="Enter your name" />
+        <label for="age">Your Age</label>
+        <input type="number" id="age" name="age" required placeholder="Enter your name" />
+
+        <label for="email">Your Email</label>
+        <input type="email" id="email" name="email" required placeholder="Enter your email" />
+
+        <label for="happy">Your Satisfaction Level</label>
+        <input type="range" id="happy" name="happy" required/>
+
+        <label for="message">Your Message</label>
+        <textarea id="message" name="message" rows="5" required placeholder="Write your message here..."></textarea>
+
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
+     <!-- LET'S CONNECT -->
+    <section class="connect">
+      <h2>Let’s Connect</h2>
+      <p>
+        If you love films as much as I do, or want to collaborate — I’d love to
+        hear from you!
+      </p>
+      <div class="social-links">
+        <a href="mailto:victorybedru@gmail.com" target="_blank">✉️ Email Me</a>
+        <a href="https://www.instagram.com/victorybedru" target="_blank"
+          >📸 Instagram</a
+        >
+        <a href="https://www.linkedin.com/victorybedru" target="_blank"
+          >💼 LinkedIn</a
+        >
+      </div>
+    </section>
+
+    <footer>
+      <div class="footer">
+        <p>@2025 My Movie Hub | Designed by Victory Bedru</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
