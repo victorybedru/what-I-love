@@ -137,9 +137,10 @@ nav {
 /*BOX OFFICE SECTION (IFRAMES)*/
 .firstRow,.secondRow {
   display: flex;/* Use flexbox layout */
-  padding: 40px;
+  padding:10px;
   width: 100%;/* Full width */
-  justify-content: space-between;
+  justify-content:space-between;
+  margin: 0 auto;
 }
 
 iframe {
